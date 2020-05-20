@@ -26,6 +26,25 @@ Our motiviation for this project get a situaonal glance of the past for a partic
 2. Enter a location on earth (i.e Tokyo or London, UK)
 3. View the weather, GPS information, an image from the location (and date), and a historical event for that date.
 
+
+
+## APIs Used
+
+
+
+* Weather History
+https://rapidapi.com/iddogino/api/global-weather-history
+
+* Historical Events
+http://history.muffinlabs.com/date
+
+
+* GeoLocation
+https://rapidapi.com/natkapral/api/ip-geo-location
+
+* Imgur
+https://rapidapi.com/imgur/api/imgur-9
+
 ## Credits
 
 * HTML & CSS : Noah & Rudy
