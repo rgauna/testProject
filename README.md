@@ -1,30 +1,83 @@
-Tasks:
+## Project Title
 
-1. create a repo - done
-2. create a user story - pending
-3. create a workflow - pending
+Historical Weather (subject to change)
+
+## Description 
+
+A web application that retrieves historical information for a selected date in the past for a particular geographical location based on the user input. Here is the information we want to retrieve for a historical date & location:
+
+* weather
+* location GPS information 
+* an image that corresponds to the date and location
+* a historical event (if applicable)
+
+Our motiviation for this project get a situaonal glance of the past for a particular location.
 
 
-------
 
-project idea:
+## Installation
 
-Weather Search Engine
+1. To start the application, navigate to the GitHub page:
 
-A search engine that retrieves the historical weather of a location in the world that displays a corresponding relevant image for that location, date, and weather.
 
-APIs:
-1. for the date
-2. one for the event on that date
-3. one for the weather display for the event for that date 
-4. one for the corresponding image
-5.
+## Usage 
 
-----
+1. Enter a date in the past
+2. Enter a location on earth (i.e Tokyo or London, UK)
+3. View the weather, GPS information, an image from the location (and date), and a historical event for that date.
 
-Workload Breakdown:
 
-1. HTML -
-2. CSS -
-3. JS/AJAX/JQUERY - -
+
+## APIs Used
+
+
+
+* Weather History
+https://rapidapi.com/iddogino/api/global-weather-history
+
+* Historical Events
+http://history.muffinlabs.com/date
+
+
+* GeoLocation
+https://rapidapi.com/natkapral/api/ip-geo-location
+
+* Imgur
+https://rapidapi.com/imgur/api/imgur-9
+
+## Credits
+
+* HTML & CSS : Noah & Rudy
+* JavaScript: Reggie, Micheal
+
+
+
+## License
+----------------------------------------------------------------------------
+Copyright (c) [2020] [Coding Bootcamp Group 3]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-----------------------------------------------------------------------------
+
+
+
+
+
 
