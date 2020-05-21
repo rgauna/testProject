@@ -7,6 +7,11 @@
     display: block;
     margin: auto;
     box-shadow: 5px 10px rgb(106, 96, 140);
+    animation: boxGlow 3s infinite;
+}
+
+@keyframes boxGlow {
+    50% {box-shadow: 10px 20px 30px rgb(106, 96, 140);}
 }
 
 body {
