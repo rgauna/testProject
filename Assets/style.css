@@ -1,0 +1,21 @@
+#container {
+    background-image: url(./Weather-data-3435\ \(1\).jpg);
+    color: #E0F3F9 ;
+    border: #E0F3F9 3px solid ;
+    border-radius: 2px;
+    display: block;
+    margin: auto;
+    box-shadow: 5px 10px rgb(106, 96, 140);
+}
+
+body {
+    background: #E0E7F9;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #E0F3F9;
+}
+footer p a:hover {
+    color: #F3E0F9;
+}
