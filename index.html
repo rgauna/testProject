@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PLACEHOLDER PROJECT TITLE</title>
     <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
     <script>
 
 
@@ -13,40 +15,56 @@
 <body>
     <!-- container/wrapper for the form content -->
     <div id="container">
-        <div class="row">
-            <div id="col1" class="column">
+        <div class="col-wrapper">
+             <nav class="navbar">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <br>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <br>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <br>
+                    </ul>
+                </nav>
+        
+            <div id="col1" class="col ">
                 <div class="form-wrap">
-                <h1>Welcome to the Global Weather Center</h1>
-                <p>Please enter a time and date to view the weather status</p>
-                 <form>
-                    <div class="form-group">
-                     <label for="date">Date</label>
-                     <input type="date" name="date" id="date" />
-                    </div>
-                    <div class="form-group">
-                     <label for="location">Location</label>
-                     <input type="text" name="location" id="location" />
-                    </div>
-                    <button type="submit" class="btn">Submit</button>
-                 </form>
-                </div>
-            <footer>
-         <p>Like Our First Project? <a href="#">Click Here To Give Kudos!</a></p>
-            </footer>
-
-
-
+                    <h1>Welcome to the Global Weather Center</h1>
+                    <p>Please enter a time and date to view the weather status</p>
+                    <form>
+                      <div class="form-group">
+                        <label for="date">Date</label>
+                        <input class="date" type="date" name="date" id="date" />
+                        <br>
+                      </div>
+                      <div class="form-group">
+                        <label class="location" for="location">Location</label>
+                        <input type="text" name="location" id="location" />
+                        <br>
+                      </div>
+                      <br>
+                      <button type="submit" class="btn">Submit</button>
+                    </form>
+                  </div>
             </div>
-            <div id="col2" class="column"></div>
-            <h3>This Where The Results Appear</h3>
-
-
+            <div id="results">
+                <h1>results area</h1>
+                <textarea name="" id="" cols="30" rows="10">weather & location data will appear here...</textarea>
             </div>
-         </div>
+    
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
-###########################################################
+
 <!-- I am going to use portions of this original code thats why its still here at the bottom :)
 
 
@@ -71,4 +89,3 @@
 
 
 -->
-###########################################################
