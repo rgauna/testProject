@@ -1,4 +1,4 @@
-#container {
+/* #container {
     background-image: url(./Weather-data-3435\ \(1\).jpg);
     padding: 100px;
     color: #E0F3F9 ;
@@ -24,4 +24,16 @@ footer p a {
 }
 footer p a:hover {
     color: #F3E0F9;
+} */
+
+.column {
+    float: left;
+    width: 50%;
+
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
 }
