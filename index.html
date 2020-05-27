@@ -1,91 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLACEHOLDER PROJECT TITLE</title>
-    <link rel="stylesheet" href="./Assets/style.css">
-    <link rel="stylesheet" href="">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
-    <script>
-
-
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Welcome to the most extraordinary hotel in Boston Massachusetts">
+  <meta name="keywords" content="hotel,boston hotel,new england hotel">
+  <link rel="stylesheet" href="./Assets/style.css">
+  <title>TLA | Welcome</title>
 </head>
 <body>
-    <!-- container/wrapper for the form content -->
-    <div id="container">
-        <div class="col-wrapper">
-             <nav class="navbar">
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <br>
-                        <li>
-                            <a href="#">About Us</a>
-                        </li>
-                        <br>
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
-                        <br>
-                    </ul>
-                </nav>
-        
-            <div id="col1" class="col ">
-                <div class="form-wrap">
-                    <h1>Welcome to the Global Weather Center</h1>
-                    <p>Please enter a time and date to view the weather status</p>
-                    <form>
-                      <div class="form-group">
-                        <label for="date">Date</label>
-                        <input class="date" type="date" name="date" id="date" />
-                        <br>
-                      </div>
-                      <div class="form-group">
-                        <label class="location" for="location">Location</label>
-                        <input type="text" name="location" id="location" />
-                        <br>
-                      </div>
-                      <br>
-                      <button type="submit" class="btn">Submit</button>
-                    </form>
-                  </div>
-            </div>
-            <div id="results">
-                <h1>results area</h1>
-                <textarea name="" id="" cols="30" rows="10">weather & location data will appear here...</textarea>
-            </div>
-    
-            </div>
+  <header>
+    <nav id="navbar">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">Travel Landing Area</a></h1>
+        <ul>
+          <li><a class="current" href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="showcase">
+      <div class="container">
+        <div class="showcase-content">
+          <h1><span class="text-primary">Enjoy, ***location*** </span></h1>
+          <p id="primaryP"> weather information will default to current location, and once the location is set the weather information will change and the backround image corresponding to the location will change</p>
         </div>
+      </div>
     </div>
+  </header>
+
+  <section id="home-info" class="bg-dark">
+    <div class="info-img"></div>
+    <div class="info-content">
+      <h2><span class="text-primary">Hotspots Of:</span>  ***location***</h2>
+      <p>
+         We can display the locational hotspots here...
+      </p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="box bg-light">
+      <i class="fas fa-hotel fa-3x"></i>
+      <h3>Historic Event</h3>
+      <p>If applicable, one could go here</p>
+    </div>
+    <div class="box bg-primary">
+        <i class="fas fa-utensils fa-3x"></i>
+        <h3>Another Possible addition</h3>
+        <p>we can add another idea here</p>
+    </div>
+    <div class="box bg-light">
+        <i class="fas fa-dumbbell fa-3x"></i>
+        <h3>Another Possible addition</h3>
+        <p>we can also add another idea here</p>
+    </div>
+  </section>
+
+  <div class="clr"></div>
 </body>
 </html>
-
-
-<!-- I am going to use portions of this original code thats why its still here at the bottom :)
-
-
-<div class="form-wrap">
-    <h1>Welcome to the Global Weather Center</h1>
-    <p>Please enter a time and date to view the weather status</p>
-    <form>
-      <div class="form-group">
-        <label for="date">Date</label>
-        <input type="date" name="date" id="date" />
-      </div>
-      <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" name="location" id="location" />
-      </div>
-      <button type="submit" class="btn">Submit</button>
-    </form>
-  </div>
-  <footer>
-    <p>Like Our First Project? <a href="#">Click Here To Give Kudos!</a></p>
-  </footer> 
-
-
--->
