@@ -33,7 +33,7 @@ p {
 }
 
 .text-primary {
-  color: #f7c08a;
+  color:azure;
 }
 
 .lead {
@@ -56,8 +56,7 @@ p {
 }
 
 .btn-light {
-  background: #f4f4f4;
-  color: #333;
+  color: azure;
 }
 
 .bg-dark {
@@ -67,12 +66,12 @@ p {
 
 .bg-light {
   background: #f4f4f4;
-  color: #333;
+  color:azure;
 }
 
 .bg-primary {
   background:;
-  color: #333;
+  color: azure;
 }
 
 .clr {
@@ -90,13 +89,16 @@ p {
 
 /* Navbar */
 #navbar {
-  background:;
-  color: ;
+
+  background: url('./Ambient_Sky_Painting_Sky_Fire_2_ipad_3_wallpaper.jpg') fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: auto;
+  color: azure;
 }
 
 #navbar a {
-  color:;
+  color:azure;
 }
 
 #navbar h1 {
@@ -127,11 +129,11 @@ p {
 
 /* Showcase */
 #showcase {
-  background: url('') no-repeat center center/cover;
+  background: url('./Ambient_Sky_Painting_Sky_Fire_2_ipad_3_wallpaper.jpg') no-repeat center center/cover fixed;
   height: 600px;
 }
 #primaryP {
-  color: black;
+  color:azure;
 }
 
 #showcase .showcase-content {
@@ -153,12 +155,15 @@ p {
 /* Home Info */
 #home-info {
   height: 400px;
+  background: url('./tumblr_mjjzrol1gS1r4mlyvo8_1280.jpg') fixed; 
+  background-size: cover;
 }
 
 #home-info .info-img {
   float: left;
   width: 50%;
-  background: url() no-repeat;
+  opacity: .5;
+  background-size: contain;
   min-height: 100%;
 }
 
@@ -181,6 +186,8 @@ p {
   width: 33.3%;
   padding: 50px;
   text-align:center;
+  background: url('./tumblr_mjjzrol1gS1r4mlyvo8_1280.jpg') fixed no-repeat;
+  background-size: cover;
 }
 
 .box i {
