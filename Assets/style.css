@@ -9,6 +9,7 @@
 html,body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7em;
+  box-sizing: border-box;
 }
 
 a {
@@ -31,6 +32,10 @@ p {
   overflow: auto;
   padding: 0 20px;
 }
+
+.flex-container {
+    display: flex;
+  }
 
 .text-primary {
   color:azure;
@@ -154,7 +159,7 @@ p {
 
 /* Home Info */
 #home-info {
-  height: 400px;
+  height: 615px;
   background: url('./tumblr_mjjzrol1gS1r4mlyvo8_1280.jpg') fixed; 
   background-size: cover;
 }
@@ -188,6 +193,7 @@ p {
   text-align:center;
   background: url('./tumblr_mjjzrol1gS1r4mlyvo8_1280.jpg') fixed no-repeat;
   background-size: cover;
+
 }
 
 .box i {
