@@ -44,7 +44,7 @@ function initialRequest() {
 }
 
 function changeBackground(){
-    //if(this.readyState == 4 && this.status === 200){
+    if(this.readyState == 4 && this.status === 200){
         var response = JSON.parse(data.responseText);
             console.log(response);
             var imgResult = response.results[0].user.profile_image.large;
