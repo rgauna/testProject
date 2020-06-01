@@ -1,7 +1,9 @@
 var d = new Date();
 document.getElementById("currentTime").innerHTML = d;
-
-
+var apiKey = "&appid=c32cee6b53ed48e0afdd9368ee69e073";
+var apiToday = "https://api.openweathermap.org/data/2.5/weather?q=";
+var cityArr = ["San Antonio"];
+var todayUrl = apiToday+cityArr[0]+apiKey;
 // geolocation
 
 var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
@@ -11,6 +13,11 @@ var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
 
 // Image API Info
 var imgaeAPIKey = '1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII';
+var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
+var citySearch = document.getElementById('#city-input');
+//.val()
+var imgURL = 'https://api.unsplash.com/search/photos';
+changeBackground();
 // var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
 var citySearch = document.getElementById('city-input').nodeValue;
 var searchbtn = document.getElementById('add-city');
@@ -42,16 +49,40 @@ function initialRequest() {
         }
     })
 }
+$.ajax({
+    url: todayUrl,
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+    var tempElm =$("#temp");
+    var temperature =$("<div>");
+    temperature.text("temp: "+response.main.temp);
+    tempElm.append(temperature);
+    temperature.text("temp: "+response.main.temp);
+    tempElm.append(temperature);
+    var humidityElm =$("#humidity");
+    var humidity =$("<div>");
+    humidity.text("humidity: "+response.main.humidity);
+    humidityElm.append(humidity);
+    var windElm =$("#windSpeed");
+    var windSpeed =$("<div>");
+    windSpeed.text("wind speed: "+response.wind.speed);
+    windElm.append(windSpeed);
 
-function changeBackground(){
-    if(this.readyState == 4 && this.status === 200){
-        var response = JSON.parse(data.responseText);
-            console.log(response);
-            var imgResult = response.results[0].user.profile_image.large;
-            var img = document.getElementById('backgroundImg');
-            $('img').attr('src', imgResult);
-        // img.setAttributeNode(img) = result.results[0].user.profile_image.large; 
+  });
+  anime({
+    targets: '#travl',
+    rotateY: 250,
+    direction: 'reverse'
+  });
+function rotate(){
+      anime({
+    targets: '#primaryP,#hotSpotP',
+    rotateY: 250,
+    direction: 'reverse'
+  });
 }
 
-searchbtn.addEventListener('click', initialRequest);
-
+$('#add-city').on('click', function(event) {
+rotate();
+})

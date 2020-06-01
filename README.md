@@ -48,7 +48,7 @@ https://rapidapi.com/imgur/api/imgur-9
 ## Credits
 
 * HTML & CSS : Noah & Rudy
-* JavaScript: Reggie, Micheal
+* JavaScript: Reggie, Michael
 
 
 
