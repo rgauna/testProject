@@ -1,5 +1,4 @@
 
-
 var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
 
 document.getElementById('button').addEventListener('click', loadWait);
