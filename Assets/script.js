@@ -13,10 +13,7 @@ var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
  var queryURL = "https://apility-io-ip-geolocation-v1.p.rapidapi.com/%7Bip%7D" +
  "q=Bujumbura,Burundi&appid=" + APIKey;
 
-<<<<<<< HEAD
- HEAD
-=======
->>>>>>> 47c901917d585d4435b238c95e66be2949fed6dd
+
 // airport wait times:
 
 var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
@@ -52,11 +49,11 @@ document.getElementById('button').addEventListener('click', loadWait);
       }
 
       xhr.send();
+      xhr.send(data);
     }
-    xhr.send(data);
+   
 
         
-<<<<<<< HEAD
 // Image API Info
 var imgaeAPIKey = '1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII';
 var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
@@ -140,6 +137,4 @@ document.getElementById('add-city').addEventListener('click', function(event){
 })
 
 
- f5ceb97cab33e18c10e254b73810f19bde56fc97
-=======
->>>>>>> 47c901917d585d4435b238c95e66be2949fed6dd
+
