@@ -96,7 +96,7 @@ function initialRequest() {
 
 function rotate(){
       anime({
-    targets: '#primaryP,#hotSpotP',
+    targets: '#primaryP',
     rotateY: 250,
     direction: 'reverse',
     duration: 3000
