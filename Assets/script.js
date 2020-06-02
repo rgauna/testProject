@@ -4,7 +4,7 @@ var apiKey = "&appid=c32cee6b53ed48e0afdd9368ee69e073";
 var apiToday = "https://api.openweathermap.org/data/2.5/weather?q=";
 var input = document.getElementById('city-input').value;
 var units = "&units=imperial";
-var todayUrl = apiToday+"austin"+apiKey+units;
+var todayUrl = apiToday+input+apiKey+units;
 var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
 // geolocation
 
