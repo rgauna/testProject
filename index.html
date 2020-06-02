@@ -36,7 +36,7 @@
 
           <div id="citySearch">
               <form id="city-form">
-                <input type="text"  placeholder="Search for a city..." id="city-input" />
+                <input type="text"   id="city-input" value ="austin"/>
                 <div>
                   <button type="submit" id="add-city" class="btn btn-primary">
                     <i class="fab fa-cloudversify">SUBMIT</i>
@@ -45,12 +45,12 @@
               </form>
 
           <!-- Retrieved data will be dumped here -->
-          <div class="city"> san antonio</div>
+          <div class="city"></div>
           <div class="country"></div>
           <div class="longitude"></div>
           <div class="latitude"></div>
 
-          <div id="primaryP" > This will be the P-tag area where the weather & locaiton informaiton will be populated
+          <div id="primaryP" >
             <div class="weather">
               <p id ="temp"></p>  
               <p id ="humidity"></p>
@@ -64,35 +64,14 @@
     </div>
   </header>
 
-  <section id="hotSpotSec" >
-  <img src="" id='backgroundImg'>
-    <div class="info-content">
-      <h2 id="hotSpots ">Hotspots Of: ***location***</h2>
-      <p id="hotSpotP">
-         We can display the locational hotspots here in this DIV area.
-      </p>
-    </div>
+  <section id="airportWait" >
+    <h1>Top Airport Wait Times</h1>
+    <button id="button" class="btn">Click Here for top aiport wait times</button>
+    <div id="wait"></div>
+
+
+   </div>
   </section>
-
-  <!-- this section below might not be needed, saving for possible alter use -->
-
-  <!-- <section id="features">
-    <div class="box bg-light">
-      <i class="fas fa-hotel fa-3x"></i>
-      <h3>Historic Event</h3>
-      <p>If applicable, one could go here</p>
-    </div>
-    <div class="box bg-primary">
-        <i class="fas fa-utensils fa-3x"></i>
-        <h3>Another Possible addition</h3>
-        <p>we can add another idea here</p>
-    </div>
-    <div class="box bg-light">
-        <i class="fas fa-dumbbell fa-3x"></i>
-        <h3>Another Possible addition</h3>
-        <p>we can also add another idea here</p>
-    </div>
-  </section> -->
 
   <div class="clr"></div>
   <script src="https://code.jquery.com/jquery.js"></script>
