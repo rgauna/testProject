@@ -23,6 +23,7 @@ h1, h2, h3 {
 
 p {
   margin: 10px 0;
+  padding: 10px;
 }
 
 /* Utility Classes */
@@ -176,9 +177,12 @@ p {
   border-radius: 4px;
   border: 1px solid #bbb;
   height: 200px;
-  
-
 }
+.weather{
+  float:left;
+  color:azure;
+}
+
 
 #showcase .showcase-content {
   color:;

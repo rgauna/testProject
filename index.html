@@ -10,15 +10,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
   <link rel="stylesheet" href="./Assets/style.css">
   <link rel="stylesheet" href="./Assets/media_queries.css">
+  
   <title>TLA | Welcome</title>
 </head>
-<body>
+<body >
   <header>
     <nav id="navbar">
       <div class="container">
-        <h1><a href="index.html">Travel Dashboard</a>
+        <h1 id="travl"><a href="index.html">Travel Dashboard</a>
         </h1>
-          <ul>
+          <ul id="nav">
           <li><a class="current" href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -44,12 +45,20 @@
               </form>
 
           <!-- Retrieved data will be dumped here -->
-          <div class="city"></div>
+          <div class="city"> san antonio</div>
           <div class="country"></div>
           <div class="longitude"></div>
           <div class="latitude"></div>
 
-          <p id="primaryP"> This will be the P-tag area where the weather & locaiton informaiton will be populated</p>
+          <div id="primaryP" > This will be the P-tag area where the weather & locaiton informaiton will be populated
+            <div class="weather">
+              <p id ="temp"></p>  
+              <p id ="humidity"></p>
+              <p id ="windSpeed"></p>
+            </div>
+          </div>
+          
+          
         </div>
       </div>
     </div>
@@ -86,6 +95,10 @@
   </section> -->
 
   <div class="clr"></div>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js" 
+  integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY=" 
+  crossorigin="anonymous"></script>
   <script>
 
   
