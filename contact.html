@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
-  <link rel="stylesheet" href="./Assets/style.css">
-  <link rel="stylesheet" href="./Assets/media_queries.css">
-  <title>Contact</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<link rel="stylesheet" href="./Assets/style.css">
+	<link rel="stylesheet" href="./Assets/media_queries.css">
+	<title>Contact</title>
 </head>
+
 <body>
-  <header>
-    <nav id="navbar">
-      <div class="container">
-        <h1><a href="index.html">Travel Dashboard</a>
-        </h1>
-          <ul>
-          <li><a class="current" href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+	<header>
+		<nav id="navbar">
+			<div class="container">
+				<h1><a href="index.html">Travel Dashboard</a>
+				</h1>
+				<ul>
+					<li><a class="current" href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
 
-    <div id="showcase">
-      <div class="container">
-        <div class="showcase-content">
-          <!--This is for the contact us page-->
-          </div>
- 
-  </header>
+		<div id="showcase" style="height:auto">
+			<div class="container">
+				<div class="showcase-content">
+					<!--This is for the contact us page-->
+
+					<div class="container-contact">
+						<div style="text-align:center">
+							<h2 style="color: white; font-weight: bold; text-align: center;">Contact Us</h2>
+
+						</div> 
+						<div class="row">
+							<div class="column">
+
+							</div>
+							<div class="column" style="width:100%; margin:0 auto;">
+								<form action="/action_page.php">
+									<label for="fname" style="color: white; text-align: center;">First Name</label>
+									<input type="text" id="fname" name="firstname" placeholder="Your name..">
+									<label for="lname" style="color: white;">Last Name</label>
+									<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+									<label for="country" style="color: white;">Country</label>
+									<select id="country" name="country">
+										<option value="australia" style="color: white;">Australia</option>
+										<option value="canada" style="color: white;">Canada</option>
+										<option value="usa" style="color: white;">USA</option>
+									</select>
+									<label for="subject" style="color: white;">Subject</label>
+									<textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+									<input type="submit" value="Submit">
+								</form>
+							</div>
+						</div>
+					</div>
+					
+						<div class="textarea#styled" style="width:100%">
+						<!--Brief description of the webpage-->
+						<p style="color: white; font-weight: bold;">For more details on our services, please contact us directly by email. You can contact each developer,
+							although they all worked individually, everybody took part as a team to bring this webpage to life! <br>Email us at:<br><br>
+								Noah Soukup:<br>
+								<a href="mailto:noahsoukupraesch@gmail.com">	noahsoukupraech@gmail.com</a><br>
+								Michael Jaeschke: <br>
+								<a href="Jaeschke21@gmail.com">	Jaeschke21@gmail.com</a><br>
+								Reggie Littleton: <br>
+								<a href="hitsupod@gmail.com">hitsupod@gmail.com</a><br>
+								Rudy Gauna: <br>
+								<a href="Rudy.gauna@gmail.com">	Rudy.gauna@gmail.com</a>
+
+						</p>
+						</div>
+				</div>
+
+	</header>
 
 
 
-  <div class="clr"></div>
-  <script src="./Assets/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<div class="clr"></div>
+	<script src="./Assets/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </body>
+
 </html>

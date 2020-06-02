@@ -65,7 +65,7 @@ $("#add-city").on("click", function (e) {
     success: function (data) {
       console.log(data);
       data.results.forEach((photo) => {
-        $("img").attr({ src: photo.urls.regular });
+        $("img").attr({ src: photo.urls.small});
       });
     },
   });
