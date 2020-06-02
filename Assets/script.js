@@ -13,8 +13,20 @@ var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
  var queryURL = "https://apility-io-ip-geolocation-v1.p.rapidapi.com/%7Bip%7D" +
  "q=Bujumbura,Burundi&appid=" + APIKey;
 
+ 
+// Image API Info
+var imgaeAPIKey = '1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII';
+var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
+var citySearch = document.getElementById('#city-input');
+//.val()
+var imgURL = 'https://api.unsplash.com/search/photos';
+//changeBackground();
+// var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
+var citySearch = document.getElementById('city-input').nodeValue;
+var searchbtn = document.getElementById('add-city');
 
 // airport wait times:
+
 
 var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
 
@@ -46,52 +58,9 @@ document.getElementById('button').addEventListener('click', loadWait);
 
           document.getElementById("wait").innerHTML = output;
         }
-      }
-
-      xhr.send();
-      xhr.send(data);
+ 
     }
-   
 
-        
-// Image API Info
-var imgaeAPIKey = '1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII';
-var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
-var citySearch = document.getElementById('#city-input');
-//.val()
-var imgURL = 'https://api.unsplash.com/search/photos';
-//changeBackground();
-// var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
-var citySearch = document.getElementById('city-input').nodeValue;
-var searchbtn = document.getElementById('add-city');
-
-// Background image function
-function initialRequest() {
-    var imgURL = 'https://api.unsplash.com/search/photos/?query=' + citySearch;
-    // var imgObj = new XMLHttpRequest();
-    // imgObj.onreadystatechange = changeBackground;
-    // imgObj.open('GET', imgURL, true);
-    // imgObj.setRequestHeader('Authorization', '1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII');
-    //imgObj.send();
-
-    $.ajax({
-        url: 'https://api.unsplash.com/search/photos',
-        dataType: 'json',
-        method: 'GET',
-        data:{
-            query: 'citySearch', 
-            client_id: '1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII',
-            page: 1,
-            keyword: 'city',
-        success: function(data){
-            return data;   
-        },
-        error: function(error){
-            console.log(error);
-            }
-        }
-    })
-}
 
 
 function rotate(){
@@ -137,4 +106,12 @@ document.getElementById('add-city').addEventListener('click', function(event){
 })
 
 
+
+      }
+
+      xhr.send();
+
+    xhr.send(data);
+
+        
 
