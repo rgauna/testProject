@@ -17,7 +17,7 @@ var searchbtn = document.getElementById('add-city');
 
 //weatherapi
 var weatherApi ="https://api.openweathermap.org/data/2.5/weather?q=";
-var cityName ="austin";
+var cityName = document.getElementById('city-input').value;
 var weatherApiKey ="&appid=c32cee6b53ed48e0afdd9368ee69e073";
 var units ="&units=imperial";
 var todayUrl =weatherApi+cityName+weatherApiKey;
@@ -39,7 +39,7 @@ document.getElementById('button').addEventListener('click', loadWait);
       xhr.onload = function(){
         if(this.status == 200){
           var wait = JSON.parse(this.responseText);
-
+           
           var output = '';
           for(var i in wait){
             output +=
@@ -52,46 +52,11 @@ document.getElementById('button').addEventListener('click', loadWait);
               '</ul>' +
               '</div>';
           }
-          xhr.send(data);
+          
           document.getElementById("wait").innerHTML = output;
         }
-        
+      xhr.send(data); 
     }
-
-
-
-function rotate(){
-      anime({
-    targets: '#primaryP',
-    rotateY: 250,
-    direction: 'reverse',
-    duration: 3000
-  });
-}
-function weather(){
-   $.ajax({
-    url: todayUrl,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response);
-    var tempElm =$("#temp");
-    var temperature =$("<div>");
-    temperature.text("temp: "+response.main.temp);
-    tempElm.append(temperature);
-    temperature.text("temp: "+response.main.temp);
-    tempElm.append(temperature);
-    var humidityElm =$("#humidity");
-    var humidity =$("<div>");
-    humidity.text("humidity: "+response.main.humidity);
-    humidityElm.append(humidity);
-    var windElm =$("#windSpeed");
-    var windSpeed =$("<div>");
-    windSpeed.text("wind speed: "+response.wind.speed);
-    windElm.append(windSpeed);
-
-  });
-  
-}
 
 
     $('#add-city').on('click', function(e){
@@ -127,20 +92,28 @@ function weather(){
       method: "GET",
     }).then(function (response) {
       console.log(response);
-      var tempElm =$("#temp");
+
+
+      var cityElm =$("#city").empty();
+      var cityNames =$("<h3>");
+      cityNames.text("City Weather: "+response.name);
+      cityElm.append(cityNames);
+
+      var tempElm =$("#temp").empty();
       var temperature =$("<div>");
       temperature.text("temp: "+response.main.temp);
       tempElm.append(temperature);
-      temperature.text("temp: "+response.main.temp);
-      tempElm.append(temperature);
-      var humidityElm =$("#humidity");
+
+      var humidityElm =$("#humidity").empty();
       var humidity =$("<div>");
       humidity.text("humidity: "+response.main.humidity);
       humidityElm.append(humidity);
-      var windElm =$("#windSpeed");
+
+      var windElm =$("#windSpeed").empty();
       var windSpeed =$("<div>");
       windSpeed.text("wind speed: "+response.wind.speed);
       windElm.append(windSpeed);
+      
     });
   }
 }
