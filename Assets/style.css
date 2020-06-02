@@ -197,15 +197,16 @@ p {
 }
 
 /* Hot Spot Info */
-#hotSpotSec {
+#airportWait {
   height: 960px;
   width: auto;
+  color: azure;
   background: url('./tumblr_mjjzrol1gS1r4mlyvo8_1280.jpg') fixed; 
   background-size: cover;
   
 }
 
-#hotSpotSec .info-content {
+#airportWait .info-content {
   float: left;
   width: 50%;
   height: 100%;
@@ -215,12 +216,28 @@ p {
   overflow: hidden;
 }
 
-#hotSpotSec .info-content p {
+#airportWait .info-content p {
   padding-bottom: 30px;
   color: azure;
   border-radius: 4px;
   border: 1px solid #bbb;
   height: 200px;
+
+}
+
+#waitTimes {
+  border: burlywood 1px solid;
+}
+
+#wait {
+  background: url('./plane.jpg') fixed;
+  background-size: cover;
+  
+
+
+
+
+
 
 }
 
