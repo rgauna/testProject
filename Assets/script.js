@@ -2,11 +2,13 @@ var d = new Date();
 document.getElementById("currentTime").innerHTML = d;
 var apiKey = "&appid=c32cee6b53ed48e0afdd9368ee69e073";
 var apiToday = "https://api.openweathermap.org/data/2.5/weather?q=";
-var cityArr = ["San Antonio"];
-var todayUrl = apiToday+cityArr[0]+apiKey;
+var input = document.getElementById('city-input').value;
+var units = "&units=imperial";
+var todayUrl = apiToday+"austin"+apiKey+units;
+var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
 // geolocation
 
-var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
+
 
  var queryURL = "https://apility-io-ip-geolocation-v1.p.rapidapi.com/%7Bip%7D" +
  "q=Bujumbura,Burundi&appid=" + APIKey;
@@ -17,7 +19,7 @@ var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
 var citySearch = document.getElementById('#city-input');
 //.val()
 var imgURL = 'https://api.unsplash.com/search/photos';
-changeBackground();
+//changeBackground();
 // var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
 var citySearch = document.getElementById('city-input').nodeValue;
 var searchbtn = document.getElementById('add-city');
@@ -49,7 +51,18 @@ function initialRequest() {
         }
     })
 }
-$.ajax({
+
+
+function rotate(){
+      anime({
+    targets: '#primaryP,#hotSpotP',
+    rotateY: 250,
+    direction: 'reverse',
+    duration: 3000
+  });
+}
+function weather(){
+   $.ajax({
     url: todayUrl,
     method: "GET",
   }).then(function (response) {
@@ -70,19 +83,16 @@ $.ajax({
     windElm.append(windSpeed);
 
   });
-  anime({
-    targets: '#travl',
-    rotateY: 250,
-    direction: 'reverse'
-  });
-function rotate(){
-      anime({
-    targets: '#primaryP,#hotSpotP',
-    rotateY: 250,
-    direction: 'reverse'
-  });
+  
 }
 
-$('#add-city').on('click', function(event) {
-rotate();
+
+document.getElementById('add-city').addEventListener('click', function(event){
+    event.preventDefault();
+    console.log("this is "+input);
+    rotate();
+    weather();
+
 })
+
+
