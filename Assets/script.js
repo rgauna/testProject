@@ -1,39 +1,11 @@
-var d = new Date();
-document.getElementById("currentTime").innerHTML = d;
-var apiKey = "&appid=c32cee6b53ed48e0afdd9368ee69e073";
-var apiToday = "https://api.openweathermap.org/data/2.5/weather?q=";
-var input = document.getElementById('city-input').value;
-var units = "&units=imperial";
-var todayUrl = apiToday+input+apiKey+units;
-var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
-// geolocation
 
-
-
- var queryURL = "https://apility-io-ip-geolocation-v1.p.rapidapi.com/%7Bip%7D" +
- "q=Bujumbura,Burundi&appid=" + APIKey;
-
- Michaels_Branch
-// Image API Info
-var imgaeAPIKey = '1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII';
-var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
-var citySearch = document.getElementById('#city-input');
-//.val()
-var imgURL = 'https://api.unsplash.com/search/photos';
-//changeBackground();
-// var imageSecretKey = 'pPLYR3b1xFOLPNeZVpb2G03orjzqA8kiMzUluQgBcqM';
-var citySearch = document.getElementById('city-input').nodeValue;
-var searchbtn = document.getElementById('add-city');
-=======
-// airport wait times:
-master
 
 var APIKey = "33052e9e8amsh850a6e4503bd662p1ede3cjsn618b6bce7088";
 
 document.getElementById('button').addEventListener('click', loadWait);
 
 
-// funcitn to load airport wait times
+// function to load airport wait times
     function loadWait(){
       var xhr = new XMLHttpRequest();
       xhr.open("GET", "https://tsa-wait-times.p.rapidapi.com/airports/test?APIKEY=test");
@@ -58,60 +30,68 @@ document.getElementById('button').addEventListener('click', loadWait);
 
           document.getElementById("wait").innerHTML = output;
         }
- Michaels_Branch
-    })
-}
-
-
-function rotate(){
-      anime({
-    targets: '#primaryP,#hotSpotP',
-    rotateY: 250,
-    direction: 'reverse',
-    duration: 3000
-  });
-}
-function weather(){
-   $.ajax({
-    url: todayUrl,
-    method: "GET",
-  }).then(function (response) {
-    console.log(response);
-    var tempElm =$("#temp");
-    var temperature =$("<div>");
-    temperature.text("temp: "+response.main.temp);
-    tempElm.append(temperature);
-    temperature.text("temp: "+response.main.temp);
-    tempElm.append(temperature);
-    var humidityElm =$("#humidity");
-    var humidity =$("<div>");
-    humidity.text("humidity: "+response.main.humidity);
-    humidityElm.append(humidity);
-    var windElm =$("#windSpeed");
-    var windSpeed =$("<div>");
-    windSpeed.text("wind speed: "+response.wind.speed);
-    windElm.append(windSpeed);
-
-  });
-  
-}
-
-
-document.getElementById('add-city').addEventListener('click', function(event){
-    event.preventDefault();
-    console.log("this is "+input);
-    rotate();
-    weather();
-
-})
-
-
-=======
       }
 
       xhr.send();
     }
     xhr.send(data);
 
-        
-master
+    // ////////////////
+
+
+    $('#add-city').on('click', function(e){
+        e.preventDefault();
+        $('#backgroundImg').empty();
+        var citySearch = $('#city-input').val();
+        var imgURL = 'https://api.unsplash.com/search/photos?query=' + citySearch + '&client_id=1XhY0EQp78t6XmGHtn59ng5GS1lh8DGX8IEyvFtWBII&per_page=1';
+        $.ajax({
+            url: imgURL,
+            method: 'GET',
+            success: function(data){
+                console.log(data);
+                data.results.forEach(photo => {
+                    $('img').attr({src: photo.urls.regular});
+                })
+            }
+        })
+      })
+
+    //   //////////////////////
+
+
+    function rotate(){
+        anime({
+      targets: '#primaryP',
+      rotateY: 250,
+      direction: 'reverse',
+      duration: 3000
+    });
+  }
+  function weather(){
+     $.ajax({
+      url: todayUrl,
+      method: "GET",
+    }).then(function (response) {
+      console.log(response);
+      var tempElm =$("#temp");
+      var temperature =$("<div>");
+      temperature.text("temp: "+response.main.temp);
+      tempElm.append(temperature);
+      temperature.text("temp: "+response.main.temp);
+      tempElm.append(temperature);
+      var humidityElm =$("#humidity");
+      var humidity =$("<div>");
+      humidity.text("humidity: "+response.main.humidity);
+      humidityElm.append(humidity);
+      var windElm =$("#windSpeed");
+      var windSpeed =$("<div>");
+      windSpeed.text("wind speed: "+response.wind.speed);
+      windElm.append(windSpeed);
+    });
+  }
+  document.getElementById('add-city').addEventListener('click', function(event){
+      event.preventDefault();
+      console.log("this is "+input);
+      rotate();
+      weather();
+  })
